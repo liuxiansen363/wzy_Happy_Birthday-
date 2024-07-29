@@ -325,8 +325,21 @@ const animationTimeline = () => {
       },
       "+=1"
     )
+    // 隐藏 .nine 元素
+      .to(".nine", 0.5, {
+          opacity: 0,
+          display: 'none'
+      })
 
-  // tl.seek("currentStep");
+      // 显示 .ten 元素
+      .from(".ten", 0.7, {
+          opacity: 0,
+          x: -100,
+          display: 'flex'
+      });
+
+
+    // tl.seek("currentStep");
   // tl.timeScale(2);
 
   // Restart Animation on click
