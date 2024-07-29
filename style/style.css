@@ -349,3 +349,50 @@ body {
   padding: 1rem 1.6rem;
   cursor: pointer;
 }
+
+/*第十部分*/
+/* 第十部分 */
+.ten {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; /* 视口高度的80% */
+  padding: 20px;
+  text-align: left;
+  gap: 10px; /* 元素间的间隙 */
+}
+
+.ten img.ten-image {
+  max-width: 50%; /* 图片宽度不超过容器的一半 */
+  height: auto; /* 保持图片比例 */
+  margin-bottom: 0; /* 图片和文字间的间隙 */
+}
+
+.ten .ten-text {
+  width: 50%; /* 文本宽度不超过容器的一半 */
+  margin: 0; /* 去除默认段落间距 */
+}
+
+@media (max-width: 768px) {
+  .ten {
+    flex-direction: column; /* 小屏幕设备上垂直排列 */
+    padding: 10px; /* 小屏幕设备减少内边距 */
+  }
+
+  .ten img.ten-image {
+    max-width: 90%; /* 图片宽度适应小屏幕 */
+    margin-bottom: 10px; /* 图片和文字间的间隙 */
+  }
+
+  .ten .ten-text {
+    width: 100%; /* 文本宽度适应小屏幕 */
+    font-size: 16px; /* 小屏幕字体大小调整 */
+  }
+}
+
+@media (max-width: 480px) {
+  .ten .ten-text {
+    font-size: 14px; /* 更小屏幕字体大小调整 */
+  }
+}
